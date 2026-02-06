@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -7,76 +7,85 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #000000, #1a1a1a);
-  color: #ffffff;
-  min-height: 100vh;
+  background: #000;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
-/* Container */
+/* MAIN WRAPPER */
 .container {
   width: 100%;
-  max-width: 400px;
-  padding: 2rem;
+  max-width: 420px;
+  padding: 2rem 1.2rem;
   text-align: center;
 }
 
-/* Profile */
+/* PROFILE */
 .profile img {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   border: 3px solid #e50914;
+  object-fit: cover;
   margin-bottom: 1rem;
 }
 
 .profile h1 {
-  font-size: 1.8rem;
-  color: #e50914;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
 }
 
 .profile p {
   font-size: 0.95rem;
-  color: #cccccc;
+  color: #aaa;
   margin-bottom: 2rem;
 }
 
-/* Links */
-.links a {
-  display: block;
-  background: #1a1a1a;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 1rem;
-  margin: 0.8rem 0;
-  border-radius: 10px;
-  border: 1px solid #e50914;
-  transition: all 0.3s ease;
-  font-size: 1rem;
+/* LINKS */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
+.links a {
+  background: #111;
+  border: 2px solid #e50914;
+  padding: 15px;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: 0.25s ease;
+  width: 100%;
+}
+
+/* Hover Effect Like Linktree */
 .links a:hover {
   background: #e50914;
-  color: #ffffff;
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   font-size: 0.8rem;
-  color: #777;
+  color: #666;
 }
 
-/* Responsive */
+/* MOBILE PERFECT */
 @media (max-width: 480px) {
   .container {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
   }
 
-  .profile h1 {
-    font-size: 1.5rem;
+  .links a {
+    font-size: 0.95rem;
+    padding: 14px;
   }
 }
